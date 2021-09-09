@@ -60,45 +60,6 @@ h3 {
 a {
   text-decoration: none;
 }
-.link {
-  display: flex;
-	justify-content: center;
-	align-items: center;
-  box-sizing: border-box;
-  transition: all .3s ease-in-out;
-  &:hover, &:active {opacity: 1;  color: black; background-color: white;}
-  &--underline {
-    display: inline-block;
-		@media (min-width: $laptop-min) {
-			&::after {
-	      content: '';
-	      display: block;
-	      width: 0%;
-	      height: 2px;
-	      transition: width .3s ease-in-out;
-	    }
-	    &:hover::after {width: 100%;}
-		}
-  }
-	&--callme {
-		height: 2.5rem;
-    padding: 0;
-    color: white;
-    background-color: $green;
-		border: 2px solid $green;
-		border-radius: 2rem;
-		cursor: pointer;
-		&:hover {
-			background-color: white;
-			color: $dark-green;
-			border-color: $dark-green;
-		}
-	}
-}
-.svg-logo {
-	width: 140px;
-	height: 3.5rem;
-}
 @keyframes from-top {
 	0% {transform: translateY(-2000px);}
 	70% {transform: translateY(30px);}
