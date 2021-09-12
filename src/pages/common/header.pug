@@ -5,36 +5,37 @@ header.page-header
         svg(width="20" height="24")
           use(xlink:href="img/sprite.svg#city")
         span Уфа, ул.Файзи Гаскарова 7
-      a.top-header__phone
+      a.top-header__phone(href="tel:+79033111305")
         svg(width="22" height="21")
           use(xlink:href="img/sprite.svg#phone")
         span +7 (903) 311-13-05
-      a.top-header__info-mail
+      a.top-header__info-mail(href="mailto:info@trudogo.ru")
         svg(width="22" height="18")
           use(xlink:href="img/sprite.svg#mail")
         .top-header__text-block
           span info@trudogo.ru
           span заказ услуг
-      a.top-header__pers-mail
+      a.top-header__pers-mail(href="mailto:personal@trudogo.ru")
         svg(width="22" height="18")
           use(xlink:href="img/sprite.svg#mail")
         .top-header__text-block
           span personal@trudogo.ru
           span для соискателей
   .bottom-header
-    .bottom-header__logo
-      picture
-        source(type="image/webp" srcset="img/logo.webp")
-        img(src="img/logo.png" width="125" height="28" alt="")
-    .bottom-header__nav.main-nav
-      ul.main-nav__list
-        li.main-nav__item
-          a О компании
-        li.main-nav__item
-          a Услуги
-        li.main-nav__item
-          a Отзывы
-        li.main-nav__item
-          a Вакансии
-        li.main-nav__item
-          a Контакты
+    .container.bottom-header__container
+      .bottom-header__logo
+        picture
+          source(type="image/webp" srcset="img/logo.webp")
+          img(src="img/logo.png" width="125" height="28" alt="")
+      .bottom-header__nav.main-nav
+        ul.main-nav__list
+          li.main-nav__item
+            a О компании
+          li.main-nav__item
+            a Услуги
+          li.main-nav__item
+            a Отзывы
+          li.main-nav__item
+            a Вакансии
+          li.main-nav__item
+            a Контакты
