@@ -1,0 +1,28 @@
+.main-slider {
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    color: #FE4E0F;
+    text-align: center;
+  }
+  span {
+    font-family: 'Geometria';
+    font-size: 15px;
+    text-align: center;
+  }
+  &__button {
+    position: absolute;
+    bottom: 20px;
+    width: 280px;
+    height: 60px;
+    font-size: 14px;
+    color: white;
+    background-color: #439FD8;
+    border: none;
+    border-radius: 30px;
+  }
+}

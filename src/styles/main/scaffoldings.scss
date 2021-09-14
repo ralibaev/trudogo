@@ -45,7 +45,9 @@ h1, h2 {
 	font-weight: bold;
 }
 h1 {
-	text-transform: uppercase;
+	font-family: 'Geometria';
+	font-size: 35px;
+	font-weight: bold;
 }
 h3 {
 	font-size: 16px;
@@ -55,6 +57,12 @@ h3 {
 }
 a {
   text-decoration: none;
+}
+.page-main {
+	padding-top: 50px;
+	@media (min-width: $tablet-min) {
+		padding-top: 0;
+	}
 }
 @keyframes from-top {
 	0% {transform: translateY(-2000px);}
