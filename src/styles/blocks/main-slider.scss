@@ -1,18 +1,49 @@
 .main-slider {
-  &__container {
+  @media (min-width: $laptop-min) {
+    position: relative;
+    background: url('../img/main-slider-svg.svg') center right 30%/auto 90% no-repeat;
+  }
+  &__wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (min-width: $laptop-min) {
+      align-items: flex-start;
+    }
   }
   &__title {
     color: #FE4E0F;
     text-align: center;
+    @media (min-width: $laptop-min) {
+      margin-top: 100px;
+      width: 400px;
+      font-size: 60px;
+      text-align: left;
+      word-spacing: 9999px;
+    }
   }
   span {
     font-family: 'Geometria';
     font-size: 15px;
     text-align: center;
+    @media (min-width: $laptop-min) {
+      width: 400px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+  picture {
+    @media (min-width: $tablet-min) {
+      width: 70%;
+    }
+    @media (min-width: $laptop-min) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      max-width: 760px;
+    }
   }
   &__button {
     position: absolute;
@@ -21,8 +52,15 @@
     height: 60px;
     font-size: 14px;
     color: white;
-    background-color: #439FD8;
+    background-color: $blue;
     border: none;
     border-radius: 30px;
+    @media (min-width: $laptop-min) {
+      margin: 40px 0 100px;
+      position: static;
+      background-color: $gray;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
   }
 }
