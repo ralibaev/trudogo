@@ -6,3 +6,81 @@ Modernizr.on('webp', function(result) {
     document.body.classList.add('no-webp');
   }
 });
+
+
+let advSlides = document.querySelectorAll('.advantages__slide-item');
+let advCount = 0;
+for (let i = 0; i < advSlides.length; i++) {
+  advCount++;
+}
+
+let advButtonList = document.querySelector('.advantages__button-list');
+for (let i = 0; i < advCount; i++) {
+  let advButton = document.createElement('button');
+  advButton.classList.add('advantages__button-item');
+  advButtonList.append(advButton);
+}
+
+advButtonList.childNodes[0].classList.add('advantages__button-item--active');
+
+for (let i = 0; i < advSlides.length; i++) {
+  advSlides[i].style.left = (i * 100) + '%';
+}
+
+function showAdv() {
+  for (let i = 0; i < advCount; i++) {
+    if (advButtonList.childNodes[i].classList.contains('advantages__button-item--active')) {
+      for (let j = 0; j < advSlides.length; j++) {
+        advSlides[j].style.left = (j * 100) - (i * 100) + '%';
+      }
+    }
+  }
+}
+
+function prevAdv() {
+  let x = 0;
+  for (let i = 0; i < advCount; i++) {
+    if (advButtonList.childNodes[i].classList.contains('advantages__button-item--active')) {
+      x = i;
+    }
+  }
+  advButtonList.childNodes[x].classList.remove('advantages__button-item--active');
+  if (x == 0) {
+    advButtonList.lastChild.classList.add('advantages__button-item--active');
+  } else {
+    advButtonList.childNodes[x - 1].classList.add('advantages__button-item--active');
+  }
+  showAdv();
+}
+
+function nextAdv() {
+  let x = 0;
+  for (let i = 0; i < advCount; i++) {
+    if (advButtonList.childNodes[i].classList.contains('advantages__button-item--active')) {
+      x = i;
+    }
+  }
+  advButtonList.childNodes[x].classList.remove('advantages__button-item--active');
+  if (x == (advCount - 1)) {
+    advButtonList.firstChild.classList.add('advantages__button-item--active');
+  } else {
+    advButtonList.childNodes[x + 1].classList.add('advantages__button-item--active');
+  }
+  showAdv();
+}
+
+for (let i = 0; i < advCount; i++) {
+  advButtonList.childNodes[i].addEventListener('click', function() {
+    for (let j = 0; j < advSlides.length; j++) {
+      advButtonList.childNodes[j].classList.remove('advantages__button-item--active')
+    }
+    advButtonList.childNodes[i].classList.add('advantages__button-item--active');
+    showAdv();
+  });
+}
+
+let advPrevButton = document.querySelector('.advantages__button--prev');
+advPrevButton.addEventListener('click', prevAdv);
+
+let advNextButton = document.querySelector('.advantages__button--next');
+advNextButton.addEventListener('click', nextAdv);

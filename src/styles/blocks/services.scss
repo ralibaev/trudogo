@@ -1,0 +1,19 @@
+.services {
+  padding: 50px 0;
+  background-color: #1C1C1C;
+  &__title {
+    font-size: 32px;
+    color: white;
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    margin-bottom: 30px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

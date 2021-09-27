@@ -1,24 +1,38 @@
 section.advantages
   .container.advantages__container
-    h2.advantgaes__title Наши преимущества <span>- ваши выгоды</span>
-    .advantages__picture
-      .advantages__picture-inner
-        picture
-          source(type="image/webp" media="(min-width: 768px)" srcset="img/kaska.webp")
-          source(type="image/webp" srcset="img/kaska_mobile.webp")
-          source(media="(min-width: 768px)"  srcset="img/kaska.png" alt="")
-          img(src="img/kaska_mobile.png" alt="")
-    .advantages__slider
-      .advantages__slide-list
-        .advantgaes__slide-item
-          h3 Экономьте до 40%
-          p Вся ответственность за юридическое оформление персонала, отчисления в пенсионный, медицинский и страховой фонды, уплата налогов и проживание сотрудников лежит на нашей компании. Эта сумма уже включена в стоимость услуги.
-        .advantgaes__slide-item
-          h3 Материальную ответственность берем на себя
-          p В случае форс-мажора все наши работники несут полную ответственность, так как это прописано в договоре.
-        .advantgaes__slide-item
-          h3 Оплачивайте только фактическое время работы
-          p Выберите любой удобный способ оплаты: за человеко-час или за результат. Не платите за простои и корректируйте количество необходимых работников в процессе выполнения работ.
-        .advantgaes__slide-item
-          h3 Обеспечиваем полный контроль выполняемых работ
-          p Мы строго следим за тем, чтобы условия договора выполнялись неукоснительно. Менеджеры по управлению объектами работают 24/7.
+    h2.advantages__title Наши преимущества<br> <span>- ваши выгоды</span>
+    .advantages__wrapper
+      .advantages__picture-inner--0
+        .advantages__picture-inner.advantages__picture-inner--1
+          .advantages__picture-inner.advantages__picture-inner--2
+            .advantages__picture-inner.advantages__picture-inner--3
+              .advantages__picture-inner.advantages__picture-inner--4
+                picture
+                  source(type="image/webp" media="(min-width: 768px)" srcset="img/kaska.webp")
+                  source(type="image/webp" srcset="img/kaska_mobile.webp")
+                  source(media="(min-width: 768px)"  srcset="img/kaska.png" alt="")
+                  img(src="img/kaska_mobile.png" alt="")
+      .advantages__slider
+        svg.advantages__slider-svg(width="22" height="42")
+          use(xlink:href="img/sprite.svg#lightning")
+        .advantages__slide-list
+          .advantages__slide-item
+            h3 Экономьте до 40%
+            p Вся ответственность за юридическое оформление персонала, отчисления в пенсионный, медицинский и страховой фонды, уплата налогов и проживание сотрудников лежит на нашей компании. Эта сумма уже включена в стоимость услуги.
+          .advantages__slide-item
+            h3 Материальную ответственность берем на себя
+            p В случае форс-мажора все наши работники несут полную ответственность, так как это прописано в договоре.
+          .advantages__slide-item
+            h3 Оплачивайте только фактическое время работы
+            p Выберите любой удобный способ оплаты: за человеко-час или за результат. Не платите за простои и корректируйте количество необходимых работников в процессе выполнения работ.
+          .advantages__slide-item
+            h3 Обеспечиваем полный контроль выполняемых работ
+            p Мы строго следим за тем, чтобы условия договора выполнялись неукоснительно. Менеджеры по управлению объектами работают 24/7.
+        .advantages__buttons
+          button.advantages__button.advantages__button--prev
+            svg(width="33" height="24")
+              use(xlink:href="img/sprite.svg#slider-arrow")
+          .advantages__button-list
+          button.advantages__button.advantages__button--next
+            svg(width="33" height="24")
+              use(xlink:href="img/sprite.svg#slider-arrow")
