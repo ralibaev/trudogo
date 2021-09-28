@@ -1,0 +1,23 @@
+.clients {
+  &__title, p {text-align: center;}
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 150px;
+    @media (min-width: $tablet-min) {
+      width: 33.3%;
+    }
+    @media (min-width: $laptop-min) {
+      width: 25%;
+    }
+    @media (min-width: $scaf) {
+      width: 20%;
+    }
+  }
+}

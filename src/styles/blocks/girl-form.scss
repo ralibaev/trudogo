@@ -1,0 +1,124 @@
+.girl-form {
+  padding: 70px 0 150px;
+  background-color: black;
+  @media (min-width: $tablet-min) {
+    padding: 70px 0;
+  }
+  @media (min-width: $laptop-min) {
+    padding: 100px 0 70px;
+  }
+  @media (min-width: $desktop-min) {
+    padding: 250px 0 70px;
+    background: url('../img/form-background.svg') left top/auto 80% no-repeat black;
+  }
+  &__container {
+    position: relative;
+    @media (min-width: $tablet-min) {
+      position: static;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 25px 0;
+    background-color: $green;
+    border-radius: 25px;
+    @media (min-width: $tablet-min) {
+      position: relative;
+      flex-direction: row;
+      padding: 25px;
+    }
+    @media (min-width: $scaf) {
+      padding: 50px;
+    }
+  }
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    @media (min-width: $tablet-min) {
+      width: 50%;
+      align-items: flex-start;
+    }
+    span {
+      text-align: center;
+      line-height: 1.7em;
+      @media (min-width: $tablet-min) {
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      @media (min-width: $laptop-min) {
+        font-size: 28px;
+      }
+    }
+  }
+  &__tel {
+    color: white;
+    line-height: 1.7em;
+    &:hover {opacity: 0.7;}
+    @media (min-width: $tablet-min) {
+      text-decoration: underline;
+      font-size: 20px;
+      &:hover {text-decoration: none;}
+    }
+  }
+  &__little {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.7em;
+    @media (min-width: $tablet-min) {
+      font-size: 18px;
+    }
+    @media (min-width: $laptop-min) {
+      font-size: 18px;
+    }
+  }
+  &__button {
+    position: absolute;
+    bottom: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 60px;
+    margin-top: 40px;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+    @media (min-width: $tablet-min) {
+      position: static;
+    }
+  }
+  picture {
+    @media (min-width: $tablet-min) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+    }
+  }
+  img {
+    max-width: 420px;
+    margin-top: 30px;
+    @media (min-width: $tablet-min) {
+      max-width: 500px;
+    }
+    @media (min-width: $scaf) {
+      max-width: 720px;
+    }
+  }
+}
