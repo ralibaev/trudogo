@@ -41,13 +41,21 @@ body, p, span, ol, ul {
 	font-size: 16px;
 }
 h1, h2 {
-	font-size: 20px;
 	font-weight: bold;
 }
 h1 {
 	font-family: 'Geometria';
 	font-size: 35px;
 	font-weight: bold;
+}
+h2 {
+	font-size: 30px;
+	@media (min-width: $tablet-min) {
+		font-size: 45px;
+	}
+	@media (min-width: $laptop-min) {
+		font-size: 60px;
+	}
 }
 h3 {
 	font-size: 16px;
