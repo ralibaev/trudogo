@@ -1,0 +1,38 @@
+.reviews {
+  &__wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #FAFAFB;
+  }
+  &__name {
+    font-weight: bold;
+    span {
+      font-weight: 400;
+      color: #8E8E93;
+    }
+  }
+  &__stars {
+    display: flex;
+    align-items: center;
+  }
+  &__star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+  }
+  &__number {
+    margin-left: 15px;
+    color: #E36E36;
+    font-weight: bold;
+  }
+}
