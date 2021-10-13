@@ -2,7 +2,7 @@
   display: none;
   height: 80px;
   border-bottom: 2px solid #e2e2e2;
-  @media (min-width: $tablet-min) {
+  @media (min-width: $laptop-min) {
     display: block;
   }
   @media (min-width: $laptop-min) {

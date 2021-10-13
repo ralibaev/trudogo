@@ -24,20 +24,19 @@ header.page-header
   .bottom-header
     .container.bottom-header__container
       .bottom-header__logo
-        picture
-          source(type="image/webp" srcset="img/logo.webp")
-          img(src="img/logo.png" width="125" height="28" alt="")
+        svg(width="125" height="28")
+          use(xlink:href="img/sprite.svg#logo")
       .bottom-header__nav.main-nav
         button.main-nav__toggle
           span Меню
         ul.main-nav__list
           li.main-nav__item
-            a О компании
+            a(href="#") О компании
           li.main-nav__item
-            a Услуги
+            a(href="#") Услуги
           li.main-nav__item
-            a Отзывы
+            a(href="#") Отзывы
           li.main-nav__item
-            a Вакансии
+            a(href="#") Вакансии
           li.main-nav__item
-            a Контакты
+            a(href="#") Контакты

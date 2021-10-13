@@ -130,6 +130,7 @@
   }
   &__slider-svg {
     margin: 20px auto;
+    fill: #FE4E0F;
     @media (min-width: $laptop-min) {
       display: none;
     }
@@ -214,6 +215,7 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+    svg {fill: white;}
     &--prev svg {
       transform: rotate(180deg);
     }

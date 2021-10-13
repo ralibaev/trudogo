@@ -3,15 +3,37 @@
   top: 0;
   left: 0;
   width: 100%;
+  background-color: white;
   z-index: 5;
+  @media (min-width: $laptop-min) {
+    position: static;
+  }
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 50px;
+    @media (min-width: $tablet-min) {
+      min-height: 80px;
+    }
+  }
+  &__logo svg {
+    width: 125px;
+    height: 28px;
+    @media (min-width: $tablet-min) {
+      width: 220px;
+      height: 50px;
+    }
   }
   &__nav {
     display: flex;
+    @media (min-width: $laptop-min) {
+      flex-grow: 1;
+      margin-left: 50px;
+    }
+    @media (min-width: $desktop-min) {
+      margin-left: 100px;
+    }
   }
   &__nav-toggle {
     position: absolute;

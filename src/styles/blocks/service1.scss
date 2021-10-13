@@ -1,0 +1,137 @@
+.service1 {
+  padding-bottom: 50px;
+  &__title {
+    color: #FE4E0F;
+  }
+  &__slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 40px);
+  	max-width: 1340px;
+  	padding-left: $phone-paddings;
+  	padding-right: $phone-paddings;
+  	margin: 0 auto;
+    h3 {
+      text-align: center;
+    }
+  }
+  &__slider-svg {
+    fill: $blue;
+  }
+  &__slide-list {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+    @media (min-width: 340px) {
+      height: 280px;
+    }
+    @media (min-width: 420px) {
+      height: 240px;
+    }
+    @media (min-width: 520px) {
+      height: 200px;
+    }
+    @media (min-width: 600px) {
+      height: 160px;
+    }
+    @media (min-width: $tablet-min) {
+      position: static;
+      flex-direction: column;
+      height: auto;
+      overflow: visible;
+    }
+  }
+  &__slide-item {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    @media (min-width: $tablet-min) {
+      position: static;
+      display: flex;
+      align-items: flex-start;
+    }
+    &::before {
+      @media (min-width: $tablet-min) {
+        content: '';
+        display: block;
+        margin-top: 10px;
+        min-width: 22px;
+        width: 22px;
+        height: 22px;
+        background: url('../img/services1-galka.svg') center/cover no-repeat;
+      }
+    }
+    h3 {
+      font-size: 16px;
+      text-align: center;
+      @media (min-width: $laptop-min) {
+        position: relative;
+        text-align: left;
+      }
+      &::before {
+        @media (min-width: $laptop-min) {
+          content: '';
+          position: absolute;
+          top: -2px;
+          left: -32px;
+          width: 22px;
+          height: 22px;
+          background: url('../img/advantages-galka.svg') center/cover no-repeat;
+        }
+      }
+    }
+    p {
+      font-size: 15px;
+      text-align: center;
+      line-height: 1.7em;
+      opacity: 0.8;
+      @media (min-width: $tablet-min) {
+        margin: 0;
+        margin-left: 20px;
+        text-align: left;
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    margin-top: 30px;
+    @media (min-width: $tablet-min) {
+      display: none;
+    }
+  }
+  &__button {
+    width: 33px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    svg {fill: black;}
+    &--prev svg {
+      transform: rotate(180deg);
+    }
+  }
+  &__button-list {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+  }
+  &__button-item {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0 4px;
+    background-color: #C6C6C6;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    &--active {
+      background-color: $blue;
+    }
+  }
+}

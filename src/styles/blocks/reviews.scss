@@ -6,12 +6,24 @@
   &__list {
     display: flex;
     flex-direction: column;
+    @media (min-width: $tablet-min) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
   &__item {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     background-color: #FAFAFB;
+    box-sizing: border-box;
+    @media (min-width: $tablet-min) {
+      margin: 0 5px;
+    }
+    @media (min-width: $laptop-min) {
+      width: 30%;
+      margin: 0;
+    }
   }
   &__name {
     font-weight: bold;
@@ -40,6 +52,9 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    @media (min-width: $tablet-min) {
+      margin-top: 30px;
+    }
   }
   &__button {
     width: 280px;
@@ -48,5 +63,6 @@
     background-color: #F1F1F1;
     border: none;
     border-radius: 30px;
+    cursor: pointer;
   }
 }

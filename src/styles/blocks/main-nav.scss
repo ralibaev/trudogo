@@ -2,10 +2,19 @@
   &__toggle {
     // position: absolute;
     width: 25px;
-    height: 12px;
+    height: 18px;
     padding: 0;
     background-color: transparent;
     border: none;
+    z-index: 5;
+    cursor: pointer;
+    @media (min-width: $tablet-min) {
+      width: 32px;
+      height: 24px;
+    }
+    @media (min-width: $laptop-min) {
+      display: none;
+    }
     span {
       position: relative;
       display: block;
@@ -14,6 +23,9 @@
       font-size: 0;
       line-height: 0;
       background-color: #9C9C9C;
+      @media (min-width: $tablet-min) {
+        height: 3px;
+      }
       &::before, &::after {
         content: '';
         position: absolute;
@@ -21,22 +33,82 @@
         width: 100%;
         height: 2px;
         background-color: #9C9C9C;
+        @media (min-width: $tablet-min) {
+          height: 3px;
+        }
       }
       &::before {
-        top: -5px;
+        top: -7px;
+        @media (min-width: $tablet-min) {
+          top: -10px;
+        }
       }
       &::after {
-        top: 5px;
+        top: 7px;
+        @media (min-width: $tablet-min) {
+          top: 10px;
+        }
+      }
+    }
+    &--opened {
+      span {
+        height: 0;
+        &::before, &::after {
+          top: 0;
+        }
+        &::before {
+          transform: rotate(-45deg);
+        }
+        &::after {
+          transform: rotate(45deg);
+        }
       }
     }
   }
   &__list {
+    position: absolute;
+    top: 50px;
+    right: 0;
     display: none;
     flex-direction: column;
     align-items: flex-start;
+    margin: 0;
     width: 100%;
-    &--show {
+    background-color: white;
+    animation: 0.5s from-right;
+    &--showed {
       display: flex;
+      border-top: 1px solid #9C9C9C;
+    }
+    @media (min-width: $tablet-min) {
+      top: 80px;
+    }
+    @media (min-width: $laptop-min) {
+      position: static;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      animation: none;
+    }
+  }
+  &__item {
+    display: block;
+    width: 100%;
+    @media (min-width: $laptop-min) {
+      display: inline;
+      width: auto;
+    }
+    a {
+      display: block;
+      padding: 15px;
+      color: black;
+      &:hover {
+        opacity: 0.7;
+      }
+      @media (min-width: $laptop-min) {
+        display: inline;
+        padding: 0;
+      }
     }
   }
 }

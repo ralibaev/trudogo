@@ -1,0 +1,82 @@
+.contacts {
+  padding: 50px 0;
+  background-color: black;
+  color: white;
+  font-size: 0;
+  // line-height: 0;
+  @media (min-width: $tablet-min) {
+    padding: 0;
+  }
+  &__container {
+    @media (min-width: $tablet-min) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__text-block, &__map-block {
+    @media (min-width: $tablet-min) {
+      width: 50%;
+    }
+  }
+  &__title {
+    text-align: left;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    @media (min-width: $tablet-min) {
+      line-height: 1.15em;
+    }
+    span {
+      color: $blue;
+      font-size: 30px;
+      font-weight: 700;
+      @media (min-width: $tablet-min) {
+        line-height: 1.15em;
+      }
+    }
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    @media (min-width: $tablet-min) {
+      line-height: 1.15em;
+    }
+  }
+  p {
+    font-size: 16px;
+    @media (min-width: $tablet-min) {
+      font-size: 16px;
+      line-height: 1.15em;
+    }
+  }
+  a {
+    color: white;
+    font-size: 16px;
+    &:hover {
+      opacity: 0.7;
+    }
+    @media (min-width: $tablet-min) {
+      line-height: 1.15em;
+    }
+  }
+  &__button-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    margin-bottom: 50px;
+  }
+  button {
+    width: 280px;
+    height: 60px;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    background-color: #E36E36;
+  }
+  &__map-block {
+    margin-left: -30px;
+  }
+}
