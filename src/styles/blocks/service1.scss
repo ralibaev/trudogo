@@ -2,6 +2,28 @@
   padding-bottom: 50px;
   &__title {
     color: #FE4E0F;
+    @media (min-width: $laptop-min) {
+      margin-bottom: 50px;
+    }
+  }
+  &__content {
+    @media (min-width: $laptop-min) {
+      display: flex;
+    }
+  }
+  &__picture {
+    @media (min-width: $laptop-min) {
+      // float: left;
+      width: 50%;
+      max-width: 852px;
+    }
+  }
+  &__slider {
+    @media (min-width: $laptop-min) {
+      // float: left;
+      width: calc(50% - 50px);
+      max-width: 660px;
+    }
   }
   &__slider-wrapper {
     display: flex;
@@ -12,8 +34,14 @@
   	padding-left: $phone-paddings;
   	padding-right: $phone-paddings;
   	margin: 0 auto;
+    @media (min-width: $laptop-min) {
+      margin: 0;
+    }
     h3 {
       text-align: center;
+      @media (min-width: $laptop-min) {
+        font-size: 24px;
+      }
     }
   }
   &__slider-svg {
