@@ -1,0 +1,58 @@
+.numbers {
+  @media (min-width: $scaf) {
+    padding: 100px 0;
+  }
+  &__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+    background-color: black;
+    @media (min-width: $scaf) {
+      border-radius: 30px;
+    }
+  }
+  &__title {
+    color: white;
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    @media (min-width: $tablet-min) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 30px;
+    @media (min-width: $laptop-min) {
+      width: 300px;
+    }
+  }
+  &__svg {
+    margin-bottom: 30px;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+      color: $orange;
+      font-weight: bold;
+    }
+    p {
+      height: 60px;
+      text-align: center;
+    }
+  }
+}

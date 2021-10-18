@@ -183,3 +183,84 @@ if (s1Slides.length) {
   let s1NextButton = document.querySelector('.service1__button--next');
   s1NextButton.addEventListener('click', nextS1);
 }
+
+// Слайдер в схеме работы
+
+let schemeSlides = document.querySelectorAll('.scheme__slide-item');
+if (schemeSlides.length) {
+  let schemeCount = 0;
+  for (let i = 0; i < schemeSlides.length; i++) {
+    schemeCount++;
+  }
+
+  let schemeButtonList = document.querySelector('.scheme__button-list');
+  for (let i = 0; i < schemeCount; i++) {
+    let schemeButton = document.createElement('button');
+    schemeButton.classList.add('scheme__button-item');
+    schemeButtonList.append(schemeButton);
+  }
+
+  schemeButtonList.childNodes[0].classList.add('scheme__button-item--active');
+
+  for (let i = 0; i < schemeSlides.length; i++) {
+    schemeSlides[i].style.left = (i * 100) + '%';
+  }
+
+  function showScheme() {
+    for (let i = 0; i < schemeCount; i++) {
+      if (schemeButtonList.childNodes[i].classList.contains('scheme__button-item--active')) {
+        for (let j = 0; j < schemeSlides.length; j++) {
+          schemeSlides[j].style.left = (j * 100) - (i * 100) + '%';
+        }
+      }
+    }
+  }
+
+  function prevScheme() {
+    let x = 0;
+    for (let i = 0; i < schemeCount; i++) {
+      if (schemeButtonList.childNodes[i].classList.contains('scheme__button-item--active')) {
+        x = i;
+      }
+    }
+    schemeButtonList.childNodes[x].classList.remove('scheme__button-item--active');
+    if (x == 0) {
+      schemeButtonList.lastChild.classList.add('scheme__button-item--active');
+    } else {
+      schemeButtonList.childNodes[x - 1].classList.add('scheme__button-item--active');
+    }
+    showScheme();
+  }
+
+  function nextScheme() {
+    let x = 0;
+    for (let i = 0; i < schemeCount; i++) {
+      if (schemeButtonList.childNodes[i].classList.contains('scheme__button-item--active')) {
+        x = i;
+      }
+    }
+    schemeButtonList.childNodes[x].classList.remove('scheme__button-item--active');
+    if (x == (schemeCount - 1)) {
+      schemeButtonList.firstChild.classList.add('scheme__button-item--active');
+    } else {
+      schemeButtonList.childNodes[x + 1].classList.add('scheme__button-item--active');
+    }
+    showScheme();
+  }
+
+  for (let i = 0; i < schemeCount; i++) {
+    schemeButtonList.childNodes[i].addEventListener('click', function() {
+      for (let j = 0; j < schemeSlides.length; j++) {
+        schemeButtonList.childNodes[j].classList.remove('scheme__button-item--active')
+      }
+      schemeButtonList.childNodes[i].classList.add('scheme__button-item--active');
+      showScheme();
+    });
+  }
+
+  let schemePrevButton = document.querySelector('.scheme__button--prev');
+  schemePrevButton.addEventListener('click', prevScheme);
+
+  let schemeNextButton = document.querySelector('.scheme__button--next');
+  schemeNextButton.addEventListener('click', nextScheme);
+}

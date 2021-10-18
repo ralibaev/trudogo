@@ -1,0 +1,143 @@
+.scheme {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+  &::after {
+    @media (min-width: $laptop-min) {
+      content: '';
+      float: right;
+      display: block;
+      margin-top: -250px;
+      width: 45%;
+      height: 250px;
+      background-color: $orange;
+      border-radius: 30px 0 0 30px;
+    }
+    @media (min-width: $desktop-min) {
+      width: 55%;
+    }
+  }
+  &__title {
+    margin-top: 0;
+    text-align: center;
+  }
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: $laptop-min) {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+  }
+  &__slide-list {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    @media (min-width: 380px) {
+      height: 220px;
+    }
+    @media (min-width: 420px) {
+      height: 240px;
+    }
+    @media (min-width: 540px) {
+      height: 200px;
+    }
+    @media (min-width: $tablet-min) {
+      flex-direction: column;
+      height: auto;
+    }
+    @media (min-width: $laptop-min) {
+      width: 60%;
+    }
+  }
+  &__slide-item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    @media (min-width: $tablet-min) {
+      position: static;
+    }
+    @media (min-width: $laptop-min) {
+      flex-direction: row;
+    }
+    svg {
+      width: 38px;
+      height: 38px;
+      @media (min-width: $laptop-min) {
+        margin-right: 20px;
+      }
+    }
+    h3 {
+      font-size: 18px;
+      text-align: center;
+      @media (min-width: $laptop-min) {
+        position: relative;
+        text-align: left;
+      }
+    }
+    p {
+      font-size: 15px;
+      text-align: center;
+      line-height: 1.7em;
+      opacity: 0.8;
+      @media (min-width: $laptop-min) {
+        text-align: left;
+      }
+    }
+  }
+  &__svg {
+    line-height: 0;
+    symbol {
+      fill: $blue;
+    }
+  }
+  &__buttons {
+    display: flex;
+    @media (min-width: $tablet-min) {
+      display: none;
+    }
+  }
+  &__button {
+    width: 33px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    svg {fill: black;}
+    &--prev svg {
+      transform: rotate(180deg);
+    }
+  }
+  &__button-list {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+  }
+  &__button-item {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0 4px;
+    background-color: #c4c4c4;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    &--active {
+      background-color: $blue;
+    }
+  }
+  &__picture {
+    line-height: 0;
+    @media (max-width: $tablet-max) {
+      display: none;
+    }
+  }
+}

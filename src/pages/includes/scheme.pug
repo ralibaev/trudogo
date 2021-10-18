@@ -1,0 +1,64 @@
+section.scheme
+  .container.scheme__container
+    h2.scheme__title Простая, но удобная схема сотрудничества
+    .scheme__slider
+      .scheme__slide-list
+        .scheme__slide-item
+          .scheme__svg
+            svg(width="38" height="38")
+              use(xlink:href="img/sprite.svg#scheme1")
+          .scheme__text
+            h3 Обратный звонок
+            p Менеджер определит тип работ, уточнит детали заказа и сориентирует по цене
+        .scheme__slide-item
+          .scheme__svg
+            svg(width="38" height="38")
+              use(xlink:href="img/sprite.svg#scheme2")
+          .scheme__text
+            h3 Встреча
+            p Эксперт приедет на ваш объект и оценит условия, в которых предстоит работать
+        .scheme__slide-item
+          .scheme__svg
+            svg(width="38" height="38")
+              use(xlink:href="img/sprite.svg#scheme3")
+          .scheme__text
+            h3 Заключение договора
+            p Все наши обещания фиксируются в договоре: сроки, стоимость и типы работ
+        .scheme__slide-item
+          .scheme__svg
+            svg(width="38" height="38")
+              use(xlink:href="img/sprite.svg#scheme4")
+          .scheme__text
+            h3 Расписание
+            p Вместе с вами составим расписание: на весь проект сразу или на день вперёд
+        .scheme__slide-item
+          .scheme__svg
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="19" cy="19" r="19" fill="#439FD8"/>
+            <path d="M24.2414 26.2072V14.4141M28.1725 14.4141H9.82764V26.2072H28.1725V14.4141ZM21.6207 14.4141C21.6207 14.4141 21.6207 11.7935 19.0001 11.7935C16.3794 11.7935 16.3794 14.4141 16.3794 14.4141H21.6207ZM13.7587 26.2072V14.4141V26.2072Z" stroke="white" stroke-width="1.31034" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          .scheme__text
+            h3 Контроль работы
+            p В каждой группе работников есть лидер. Он подписывает табеля учётного времени и следит, чтобы команда не прохлаждалась
+        .scheme__slide-item
+          .scheme__svg
+            svg(width="38" height="38")
+              use(xlink:href="img/sprite.svg#scheme6")
+          .scheme__text
+            h3 Оплата работ
+            p Если вы довольны нашей работой, то подписываете акт выполненных работ и перечисляете оплату на счёт
+      .scheme__buttons
+        button.scheme__button.scheme__button--prev
+          svg(width="33" height="24")
+            use(xlink:href="img/sprite.svg#slider-arrow")
+        .scheme__button-list
+        button.scheme__button.scheme__button--next
+          svg(width="33" height="24")
+            use(xlink:href="img/sprite.svg#slider-arrow")
+      .scheme__picture
+        picture
+          source(type="image/webp" media="(min-width: 1400px)" srcset="img/scheme-back2.webp")
+          source(type="image/webp" srcset="img/scheme-back1.webp")
+          source(media="(min-width: 768px)"  srcset="img/scheme-back2.png" alt="")
+          img(src="img/scheme-back1.png" alt="")
+        

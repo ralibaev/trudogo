@@ -1,12 +1,26 @@
 .sergrid {
+  padding: 50px 0;
   &__list {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    @media (min-width: $tablet-min) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
   &__item {
+    width: 280px;
     margin-bottom: 30px;
     background-color: black;
     border-radius: 30px;
+    @media (min-width: $tablet-min) {
+      margin: 0 20px 30px;
+    }
+    @media (min-width: $laptop-min) {
+      margin: 0 50px 30px;
+    }
   }
   &__item-picture {
     line-height: 0;
