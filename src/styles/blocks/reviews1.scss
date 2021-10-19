@@ -1,0 +1,17 @@
+.reviews1 {
+  padding: 30px 0 50px;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 48%;
+    margin-bottom: 30px;
+    border: 1px solid $gray;
+    cursor: pointer;
+    @media (min-width: $tablet-min) {
+      width: 23%;
+    }
+  }
+}

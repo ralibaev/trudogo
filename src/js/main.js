@@ -24,6 +24,21 @@ if (navToggle) {
   });
 }
 
+// Меню услуг
+let mainUnder = document.querySelector('.main-nav__item--under');
+if (mainUnder) {
+  let mainUnderList = document.querySelector('.main-nav__under-list');
+  mainUnder.addEventListener('click', function() {
+    if (mainUnderList.classList.contains('main-nav__under-list--showed')) {
+      mainUnder.classList.remove('main-nav__item--under--clicked');
+      mainUnderList.classList.remove('main-nav__under-list--showed');
+    } else {
+      mainUnder.classList.add('main-nav__item--under--clicked');
+      mainUnderList.classList.add('main-nav__under-list--showed');
+    };
+  });
+}
+
 // Слайдер в преимуществах
 let advSlides = document.querySelectorAll('.advantages__slide-item');
 if (advSlides.length) {

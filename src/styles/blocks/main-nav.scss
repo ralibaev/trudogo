@@ -94,6 +94,14 @@
   &__item {
     display: block;
     width: 100%;
+    &--under {
+      position: relative;
+      &--clicked .main-nav__under-list {
+        @media (min-width: $laptop-min) {
+          display: block;
+        }
+      }
+    }
     @media (min-width: $laptop-min) {
       display: inline;
       width: auto;
@@ -109,6 +117,24 @@
         display: inline;
         padding: 0;
       }
+    }
+  }
+  &__under-list {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    display: none;
+    width: 300px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: white;
+    z-index: 10;
+    &--showed {
+      display: block;
+    }
+    li {
+      margin-bottom: 10px;
     }
   }
 }
