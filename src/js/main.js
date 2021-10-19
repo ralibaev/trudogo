@@ -264,3 +264,19 @@ if (schemeSlides.length) {
   let schemeNextButton = document.querySelector('.scheme__button--next');
   schemeNextButton.addEventListener('click', nextScheme);
 }
+
+// Вакансии
+let vItem = document.querySelectorAll('.vacancies__item');
+if (vItem) {
+  vItem.forEach((item, i) => {
+    item.querySelector('.vacancies__button').addEventListener('click', function() {
+      if (item.querySelector('.vacancies__text').classList.contains('vacancies__text--show')) {
+        item.querySelector('.vacancies__text').classList.remove('vacancies__text--show');
+        item.querySelector('.vacancies__button').classList.remove('vacancies__button--show');
+      } else {
+        item.querySelector('.vacancies__text').classList.add('vacancies__text--show');
+        item.querySelector('.vacancies__button').classList.add('vacancies__button--show');
+      }
+    })
+  });
+}
