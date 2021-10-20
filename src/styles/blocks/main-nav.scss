@@ -94,11 +94,33 @@
   &__item {
     display: block;
     width: 100%;
+    padding: 10px;
     &--under {
       position: relative;
-      &--clicked .main-nav__under-list {
+      &::after {
+        content: '';
+        position: absolute;
+        right: -15px;
+        top: 14px;
+        display: block;
+        width: 18px;
+        height: 10px;
+        background: url("../img/arrow.svg") center no-repeat;
+        transition: .3s;
+        transform: rotate(180deg);
+      }
+      &--clicked {
         @media (min-width: $laptop-min) {
-          display: block;
+          background-color: #F0F0F0;
+          border-radius: 10px 10px 0 0;
+        }
+        &::after {
+          transform: rotate(0deg);
+        }
+        .main-nav__under-list {
+          @media (min-width: $laptop-min) {
+            display: block;
+          }
         }
       }
     }
@@ -120,20 +142,27 @@
     }
   }
   &__under-list {
-    position: absolute;
     left: 0;
-    top: 30px;
+    top: 35px;
     display: none;
     width: 300px;
-    padding: 0;
+    padding: 10px 0 0;
     margin: 0;
     list-style: none;
     background-color: white;
     z-index: 10;
+    @media (min-width: $laptop-min) {
+      position: absolute;
+    }
     &--showed {
       display: block;
+      @media (min-width: $laptop-min) {
+        background-color: #F0F0F0;
+        border-radius: 0 10px 10px 10px;
+      }
     }
     li {
+      padding-left: 20px;
       margin-bottom: 10px;
     }
   }

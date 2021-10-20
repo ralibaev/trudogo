@@ -69,7 +69,7 @@ h3 {
 a {
   text-decoration: none;
 }
-.page-main {
+.page-main, .entry-content {
 	padding-top: 50px;
 	@media (min-width: $tablet-min) {
 		padding-top: 80px;

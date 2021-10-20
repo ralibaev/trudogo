@@ -1,7 +1,7 @@
 header.page-header
   .top-header
     .container.top-header__container
-      .top-header__city
+      a.top-header__city(href="/contacts")
         svg(width="20" height="24")
           use(xlink:href="img/sprite.svg#city")
         span Уфа, ул.Файзи Гаскарова 7
@@ -23,7 +23,7 @@ header.page-header
           span для соискателей
   .bottom-header
     .container.bottom-header__container
-      .bottom-header__logo
+      a.bottom-header__logo(href="/")
         svg(width="125" height="28")
           use(xlink:href="img/sprite.svg#logo")
       .bottom-header__nav.main-nav
@@ -44,6 +44,6 @@ header.page-header
           li.main-nav__item
             a(href="/#reviews1") Отзывы
           li.main-nav__item
-            a(href="/vacncies") Вакансии
+            a(href="/vacancies") Вакансии
           li.main-nav__item
             a(href="/contacts") Контакты
