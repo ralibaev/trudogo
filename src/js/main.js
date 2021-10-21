@@ -295,3 +295,20 @@ if (vItem) {
     })
   });
 }
+
+// Попап
+let formButtons = document.querySelectorAll('.form__button');
+if (formButtons.length) {
+  let formLayout = document.querySelector('.form__layout');
+  let formPopup = document.querySelector('.form__popup');
+  formButtons.forEach((item, i) => {
+    item.addEventListener('click', function() {
+      formLayout.classList.add('form__layout--show');
+      formPopup.classList.add('form__popup--show');
+    });
+  });
+  formLayout.addEventListener('click', function() {
+    formLayout.classList.remove('form__layout--show');
+    formPopup.classList.remove('form__popup--show');
+  });
+}

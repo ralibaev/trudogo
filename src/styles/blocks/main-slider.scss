@@ -55,6 +55,7 @@
     background-color: $blue;
     border: none;
     border-radius: 30px;
+    cursor: pointer;
     @media (min-width: $laptop-min) {
       margin: 40px 0 100px;
       position: static;
