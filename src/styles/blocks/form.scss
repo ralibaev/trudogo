@@ -34,4 +34,7 @@
       align-items: center;
     }
   }
+  &__name, &__phone, &__mail {
+    width: 100%;
+  }
 }
