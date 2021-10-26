@@ -46,10 +46,13 @@ footer.page-footer
             a(href="#")
               svg(width="22" height="13")
                 use(xlink:href="img/sprite.svg#vk")
-.form__layout.form__layout--show
-.form__popup.form__popup--show
+.form__layout
+.form__popup
+  button.form__close
+    svg(width="24" height="24")
+      use(xlink:href="img/sprite.svg#close")
   .form__content
-    h2 Заказать персонал
+    h2.form__title Заказать персонал
     form
       input.form__name(placeholder="Имя")
       input.form__phone(placeholder="Телефон")

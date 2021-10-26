@@ -28,6 +28,9 @@
     margin-right: 15px;
   }
   &__city {margin-right: auto;}
+  &__phone svg {
+    animation: wiggle 5s infinite;
+  }
   &__info-mail, &__pers-mail {
     display: none;
     margin-left: 7%;
