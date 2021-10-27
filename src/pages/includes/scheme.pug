@@ -2,7 +2,7 @@ section.scheme
   .container.scheme__container
     h2.scheme__title Простая, но удобная схема сотрудничества
     .scheme__slider
-      .scheme__slide-list
+      .animate__animated.animate__slideInLeft.wow.scheme__slide-list
         .scheme__slide-item
           .scheme__svg
             svg(width="38" height="38")
@@ -55,7 +55,7 @@ section.scheme
         button.scheme__button.scheme__button--next
           svg(width="33" height="24")
             use(xlink:href="img/sprite.svg#slider-arrow")
-      .scheme__picture
+      .animate__animated.animate__slideInRight.wow.scheme__picture
         picture
           source(type="image/webp" media="(min-width: 1400px)" srcset="img/scheme-back2.webp")
           source(type="image/webp" srcset="img/scheme-back1.webp")

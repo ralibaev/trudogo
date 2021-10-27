@@ -1,0 +1,16 @@
+.o-kompanii {
+  padding: 50px 0;
+  &__img {
+    float: right;
+    width: 100%;
+    margin: 10px 0;
+    @media (min-width: $tablet-min) {
+      width: 50%;
+      margin-left: 30px;
+      margin-bottom: 30px;
+    }
+    @media (min-width: $scaf) {
+      width: auto;
+    }
+  }
+}

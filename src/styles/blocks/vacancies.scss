@@ -59,6 +59,7 @@
     align-items: center;
     width: 100%;
     button {
+      position: relative;
       width: 240px;
       height: 50px;
       margin: 0 auto;
@@ -68,6 +69,17 @@
       border: none;
       border-radius: 10px;
       cursor: pointer;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        transform: translateX(-40px) skewX(-45deg);
+        animation: 5s moveLight infinite;
+      }
       @media (min-width: $tablet-min) {
         margin: 50px auto;
       }
