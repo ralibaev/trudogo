@@ -1,16 +1,90 @@
 .o-kompanii {
   padding: 50px 0;
-  &__img {
-    float: right;
-    width: 100%;
-    margin: 10px 0;
-    @media (min-width: $tablet-min) {
-      width: 50%;
-      margin-left: 30px;
-      margin-bottom: 30px;
+  &__title {
+    color: #E36E36;
+  }
+  ul {
+    padding-left: 10px;
+  }
+  picture {
+    img {
+      margin: 10px 0;
+      border-radius: 5px;
+      overflow: hidden;
+      @media (min-width: $tablet-min) {
+        border-radius: 20px;
+      }
+      @media (min-width: $laptop-min) {
+        border-radius: 20px;
+      }
     }
-    @media (min-width: $scaf) {
-      width: auto;
+  }
+  &__img-right {
+    @media (min-width: $tablet-min) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+    @media (min-width: $laptop-min) {
+      align-items: center;
+    }
+  }
+  &__img-left {
+    @media (min-width: $tablet-min) {
+      display: flex;
+      justify-content: space-between;
+    }
+    @media (min-width: $laptop-min) {
+      align-items: center;
+    }
+  }
+  &__text, picture {
+    @media (min-width: $tablet-min) {
+      width: 48%;
+    }
+  }
+  &__main-text {
+    span {
+      color: $blue;
+    }
+  }
+  hr {
+    width: 100px;
+    margin-left: 0;
+    border-color: #E36E36;
+    @media (max-width: $tablet-max) {
+      display: none;
+    }
+  }
+  &__button-block {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  button {
+    position: relative;
+    width: 280px;
+    height: 60px;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 30px;
+    background-color: #E36E36;
+    overflow: hidden;
+    cursor: pointer;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      transform: translateX(-40px) skewX(-45deg);
+      animation: 5s moveLight infinite;
     }
   }
 }
