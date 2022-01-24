@@ -26,11 +26,12 @@
       width: 18px;
       height: 10px;
       background: url('../img/arrow.svg') center no-repeat;
+      transform: rotate(180deg);
       transition: .3s;
     }
     &--show {
       &::after {
-        transform: rotate(180deg);
+        transform: rotate(0deg);
       }
     }
   }
@@ -46,6 +47,10 @@
       margin: 20px 0;
       visibility: visible;
     }
+    @media (min-width: $laptop-min) {
+      display: flex;
+      justify-content: space-around;
+    }
     ul {
       padding-left: 20px;
       list-style: none;
@@ -54,6 +59,9 @@
       line-height: 1.8em;
     }
   }
+  // &__text-item {
+  //
+  // }
   &__zayava {
     display: flex;
     align-items: center;
